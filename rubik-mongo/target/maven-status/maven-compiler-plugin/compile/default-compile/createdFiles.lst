@@ -1,0 +1,5 @@
+org\rubik\mongo\Configuration.class
+org\rubik\mongo\Mongo.class
+org\rubik\mongo\MongoUtil.class
+org\rubik\mongo\MongoConfig.class
+org\rubik\mongo\MongoDao.class

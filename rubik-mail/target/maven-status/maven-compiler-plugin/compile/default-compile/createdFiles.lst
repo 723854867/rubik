@@ -1,0 +1,3 @@
+org\rubik\mail\MailConfig.class
+org\rubik\mail\Configuration.class
+org\rubik\mail\MailSender.class

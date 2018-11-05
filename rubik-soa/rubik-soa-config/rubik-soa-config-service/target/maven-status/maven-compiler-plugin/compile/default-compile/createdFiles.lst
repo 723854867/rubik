@@ -1,0 +1,4 @@
+org\rubik\soa\config\manager\RubikConfigManager.class
+org\rubik\soa\config\mybatis\dao\SysWordDao.class
+org\rubik\soa\config\mybatis\dao\SysConfigDao.class
+org\rubik\soa\config\service\RubikConfigServiceImpl.class

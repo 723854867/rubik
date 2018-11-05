@@ -1,0 +1,4 @@
+org\rubik\soa\config\bean\model\RubikConfigs.class
+org\rubik\soa\config\bean\entity\SysConfig.class
+org\rubik\soa\config\bean\model\RubikWords.class
+org\rubik\soa\config\bean\entity\SysWord.class
