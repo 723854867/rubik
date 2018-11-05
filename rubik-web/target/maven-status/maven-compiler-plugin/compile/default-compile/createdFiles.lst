@@ -1,9 +1,0 @@
-org\rubik\web\filter\CrossFilter.class
-org\rubik\web\RequestContext.class
-org\rubik\web\aop\GlobalExceptionHandler.class
-org\rubik\web\ResultFactory.class
-org\rubik\web\WebConfig.class
-org\rubik\web\aop\GatewayInterceptor.class
-org\rubik\web\GatewayHook.class
-org\rubik\web\WebUtil.class
-org\rubik\web\filter\ValidationInterceptor.class
