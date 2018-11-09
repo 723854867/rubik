@@ -9,7 +9,8 @@ import java.util.TimeZone;
 
 public class DateUtil {
 	
-	public static final int DAY_SECONDS					= 86400;
+	public static final int DAY_SECONDS						= 86400;
+	public static final int MINUTE_SECONDS					= 60;
 	
 	public static final String yyyyMMddHHmmss			= "yyyyMMddHHmmss";
 	public static final String YYYY_MM_DD_HH_MM_SS		= "yyyy-MM-dd HH:mm:ss";

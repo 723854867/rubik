@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import org.rubik.util.callback.NullResultCallback;
 
 public class CollectionUtil {
 	
@@ -47,5 +50,24 @@ public class CollectionUtil {
 		for (String string : arr) 
 			set.add(string);
 		return set;
+	}
+	
+	/**
+	 * 切分执行
+	 */
+	public static final <T> void dispersed(Collection<T> collection, NullResultCallback<List<T>> callback, int size) { 
+		List<T> list = new ArrayList<T>();
+		while (!collection.isEmpty()) {
+			Iterator<T> iterator = collection.iterator();
+			while (iterator.hasNext() && list.size() <= size) {
+				T object = iterator.next();
+				iterator.remove();
+				list.add(object);
+			}
+			if (!CollectionUtil.isEmpty(list)) {
+				callback.invoke(list);
+				list.clear();
+			}
+		}
 	}
 }
