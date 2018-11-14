@@ -20,6 +20,8 @@ public interface Constants {
 	final ConfigKey<Integer> DEVICE_MAXIMUM_REPAIR			= ConfigKey.<Integer>create("device_maximum_repair", 20, Integer.class);
 	// 维保记录上传资源个数限制
 	final ConfigKey<Integer> RESOURCE_MAXIMUM_REPAIR		= ConfigKey.<Integer>create("resource_maximum_repair", 5, Integer.class);
+	// 检查记录上传资源个数限制
+	final ConfigKey<Integer> RESOURCE_MAXIMUM_INSPECT		= ConfigKey.<Integer>create("resource_maximum_inspect", 5, Integer.class);
 	// 自查自纠上传资源个数限制
 	final ConfigKey<Integer> RESOURCE_MAXIMUM_INTROSPECT	= ConfigKey.<Integer>create("resource_maximum_introspect", 5, Integer.class);
 	// 作业人员证书有效期阈值(单位天)
