@@ -417,5 +417,6 @@
 		<module>rubik-redis</module>
 		<module>rubik-mongo</module>
 		<module>rubik-mail</module>
+		<module>rubik-soa-authority</module>
 	</modules>
 </project>

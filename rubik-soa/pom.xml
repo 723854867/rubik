@@ -15,5 +15,6 @@
 	
 	<modules>
 		<module>rubik-soa-config</module>
-  </modules>
+		<module>rubik-soa-authority</module>
+	</modules>
 </project>

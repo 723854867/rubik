@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.rubik</groupId>
+    <artifactId>rubik-soa</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <artifactId>rubik-soa-authority</artifactId>
+  <version>1.0</version>
+  <name>rubik-soa-authority</name>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>rubik-soa-authority-api</module>
+  	<module>rubik-soa-authority-bean</module>
+  	<module>rubik-soa-authority-service</module>
+  </modules>
+</project>
