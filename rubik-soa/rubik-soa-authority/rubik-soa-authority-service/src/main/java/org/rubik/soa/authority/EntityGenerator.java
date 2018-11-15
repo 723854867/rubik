@@ -11,10 +11,11 @@ public class EntityGenerator {
 
 	public static final CfgModule newCfgModular(ModularAddParam param, CfgModule parent) {
 		CfgModule instance = new CfgModule();
-		instance.setIcon(param.getIcon());
+		instance.setCss(param.getCss());
 		instance.setUrl(param.getUrl());
 		instance.setName(param.getName());
 		instance.setPriority(param.getPriority());
+		instance.setType(param.getType());
 		instance.setParent(null == parent ? 0 : parent.getId());
 		int time = DateUtil.current();
 		instance.setCreated(time);

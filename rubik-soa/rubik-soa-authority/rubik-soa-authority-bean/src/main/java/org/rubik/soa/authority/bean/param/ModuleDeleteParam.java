@@ -2,7 +2,6 @@ package org.rubik.soa.authority.bean.param;
 
 import java.util.Set;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.rubik.bean.core.param.Param;
@@ -10,15 +9,13 @@ import org.rubik.bean.core.param.Param;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
 @Getter
-public class AuthParam extends Param {
+@Setter
+public class ModuleDeleteParam extends Param{
 
-	private static final long serialVersionUID = -7110802930846787502L;
-
-	@Min(1)
-	private Integer sid;
+	private static final long serialVersionUID = -1525146750817802487L;
+	
 	@NotNull
-	private Set<Integer> tid;
+	private Set<Integer> ids;
 
 }

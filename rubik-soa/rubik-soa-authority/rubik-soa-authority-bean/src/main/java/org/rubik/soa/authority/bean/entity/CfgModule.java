@@ -4,6 +4,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import org.rubik.bean.core.Identifiable;
+import org.rubik.soa.authority.bean.enums.ModuleType;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +20,8 @@ public class CfgModule implements Identifiable<Integer> {
 	private int id;
 	private String name;
 	private String url;
-	private String icon;
+	private String css;
+	private ModuleType type;
 	private int priority;
 	private int parent;
 	private int created;

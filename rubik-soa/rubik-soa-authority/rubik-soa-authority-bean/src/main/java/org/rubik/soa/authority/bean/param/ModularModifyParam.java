@@ -4,6 +4,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 import org.rubik.bean.core.param.SidParam;
+import org.rubik.soa.authority.bean.enums.ModuleType;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +19,8 @@ public class ModularModifyParam extends SidParam {
 	private String url;
 	@NotEmpty
 	private String name;
-	private String icon;
+	private String css;
+	private ModuleType type;
 	private Integer parent;
 	@Min(0)
 	private int priority;
