@@ -1,10 +1,11 @@
 package org.rubik.soa.authority.service;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.annotation.Resource;
 
-import org.rubik.bean.core.model.Pager;
+import org.rubik.bean.core.model.Query;
 import org.rubik.soa.authority.api.AuthorityService;
 import org.rubik.soa.authority.bean.entity.CfgModule;
 import org.rubik.soa.authority.bean.entity.CfgRole;
@@ -14,7 +15,9 @@ import org.rubik.soa.authority.bean.param.ModularModifyParam;
 import org.rubik.soa.authority.bean.param.RoleAddParam;
 import org.rubik.soa.authority.bean.param.RoleModifyParam;
 import org.rubik.soa.authority.manager.AuthorityManager;
+import org.springframework.stereotype.Service;
 
+@Service("authorityService")
 public class AuthorityServiceImpl implements AuthorityService{
 
 	@Resource
@@ -32,8 +35,8 @@ public class AuthorityServiceImpl implements AuthorityService{
 	}
 
 	@Override
-	public void deleteModule(int id) {
-		authorityManager.deleteModule(id);
+	public void deleteModule(Set<Integer> ids) {
+		authorityManager.deleteModule(ids);
 		
 	}
 
@@ -45,6 +48,11 @@ public class AuthorityServiceImpl implements AuthorityService{
 	@Override
 	public List<CfgModule> cfgModules(int uid) {
 		return authorityManager.cfgModules(uid);
+	}
+	
+	@Override
+	public List<CfgModule> cfgRoleModules(int roleId) {
+		return authorityManager.cfgRoleModules(roleId);
 	}
 
 	@Override
@@ -64,23 +72,18 @@ public class AuthorityServiceImpl implements AuthorityService{
 	}
 
 	@Override
-	public List<CfgRole> cfgRoles() {
-		return authorityManager.cfgRoles();
+	public List<CfgRole> cfgRoles(Query query) {
+		return authorityManager.cfgRoles(query);
 	}
 	
 	@Override
-	public Pager<CfgRole> userRoles(int id) {
+	public List<CfgRole> userRoles(int id) {
 		return authorityManager.userRoles(id);
 	}
 
 	@Override
-	public void modularAuth(AuthParam param) {
-		authorityManager.modularAuth(param);
-	}
-
-	@Override
-	public void roleAuth(AuthParam param) {
-		authorityManager.roleAuth(param);
+	public void userAuth(AuthParam param) {
+		authorityManager.userAuth(param);
 	}
 
 }
