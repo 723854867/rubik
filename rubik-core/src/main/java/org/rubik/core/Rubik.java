@@ -126,7 +126,7 @@ public class Rubik implements ApplicationListener<ApplicationContextEvent> {
 		private long uploadMaximum = 5242880l;
 		// 单个文件上传最大字节数
 		@SerializedName("upload.maximum.per.file")
-		private long uploadMaximumPerFile = 51200;
+		private long uploadMaximumPerFile = 512000;
 		// 内存中能存放的最字节数
 		@SerializedName("upload.maximum.in.memory")
 		private int uploadMaximumInMemory = 10485760;
