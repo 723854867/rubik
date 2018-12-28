@@ -1,6 +1,6 @@
 package org.rubik.mybatis.extension;
 
-import java.util.Set;
+import java.util.List;
 
 import org.rubik.mybatis.entity.DBEntity;
 import org.rubik.mybatis.entity.DBEntityCol;
@@ -28,7 +28,7 @@ public class SqlBuilder {
 	public static String insertColumns(DBEntity entity) {
         StringBuilder sql = new StringBuilder();
         sql.append("<trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">");
-        Set<DBEntityCol> columnList = entity.columns();
+        List<DBEntityCol> columnList = entity.columns();
         for (DBEntityCol column : columnList) {
             if (!column.isInsertable()) 
                 continue;
@@ -102,7 +102,7 @@ public class SqlBuilder {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT ");
         sql.append("<trim prefix=\"\" suffix=\"\" suffixOverrides=\",\">");
-        Set<DBEntityCol> columnList = entity.columns();
+        List<DBEntityCol> columnList = entity.columns();
         for (DBEntityCol column : columnList) 
             sql.append(column.getName() + ",");
         sql.append("</trim>");
@@ -147,7 +147,7 @@ public class SqlBuilder {
 	public static String updateSetColumns(DBEntity entity) {
         StringBuilder sql = new StringBuilder();
         sql.append("<set>");
-        Set<DBEntityCol> columnList = entity.columns();
+        List<DBEntityCol> columnList = entity.columns();
         for (DBEntityCol column : columnList) {
             if (column.isId() || !column.isUpdatable()) 
             	continue;

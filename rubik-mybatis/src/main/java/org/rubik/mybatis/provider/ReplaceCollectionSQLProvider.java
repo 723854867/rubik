@@ -1,6 +1,6 @@
 package org.rubik.mybatis.provider;
 
-import java.util.Set;
+import java.util.List;
 
 import org.apache.ibatis.mapping.MappedStatement;
 import org.rubik.mybatis.entity.DBEntity;
@@ -20,7 +20,7 @@ public class ReplaceCollectionSQLProvider extends SQLProvider<String> {
 	public String effectiveSQL(MappedStatement ms) {
         DBEntity entity = getEntityTable(ms);
 		StringBuilder builder = new StringBuilder("REPLACE INTO ").append(entity.getName()).append("(");
-		Set<DBEntityCol> columns = entity.columns();
+		List<DBEntityCol> columns = entity.columns();
 		for (DBEntityCol column : columns)
 			builder.append(column.getName()).append(",");
 		builder.deleteCharAt(builder.length() - 1).append(") VALUES").append(foreachPrefix).append("(");

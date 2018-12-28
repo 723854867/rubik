@@ -1,9 +1,9 @@
 package org.rubik.util.reflect;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class Entity<ENTITY extends Entity<ENTITY, COLUMN>, COLUMN extends EntityCol<ENTITY, COLUMN>> {
 
@@ -31,7 +31,7 @@ public class Entity<ENTITY extends Entity<ENTITY, COLUMN>, COLUMN extends Entity
 		this.cols.put(col.getEntityField().getName(), col);
 	}
 	
-	public Set<COLUMN> columns() {
-		return new HashSet<COLUMN>(cols.values());
+	public List<COLUMN> columns() {
+		return new ArrayList<COLUMN>(cols.values());
 	}
 }

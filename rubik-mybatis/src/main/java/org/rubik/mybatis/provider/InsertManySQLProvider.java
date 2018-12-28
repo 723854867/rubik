@@ -1,6 +1,6 @@
 package org.rubik.mybatis.provider;
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.GeneratedValue;
 
@@ -29,7 +29,7 @@ public class InsertManySQLProvider extends SQLProvider<String> {
         sql.append(" VALUES ");
         sql.append("<foreach collection=\"collection\" item=\"record\" separator=\",\" >");
         sql.append("<trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">");
-        Set<DBEntityCol> columnList = table.columns();
+        List<DBEntityCol> columnList = table.columns();
         for (DBEntityCol column : columnList) {
             if (column.isInsertable()) 
                 sql.append(column.getColumnHolder("record") + ",");

@@ -7,7 +7,6 @@ import java.lang.reflect.Type;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import javax.persistence.Column;
@@ -102,7 +101,7 @@ public abstract class EntityFactory<ENTITY extends Entity<ENTITY, COLUMN>, COLUM
 		this.style = style;
 	}
 	
-	public Set<COLUMN> getColumns(Class<?> clazz) { 
+	public List<COLUMN> getColumns(Class<?> clazz) { 
 		ENTITY entity = get(clazz);
 		return entity.columns();
 	}

@@ -1,6 +1,6 @@
 package org.rubik.mybatis.provider;
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.GeneratedValue;
 
@@ -24,7 +24,7 @@ public class InsertSQLProvider extends SQLProvider<String> {
 	public String effectiveSQL(MappedStatement ms) {
         DBEntity entity = getEntityTable(ms);
         StringBuilder sql = new StringBuilder();
-        Set<DBEntityCol> columns = entity.columns();
+        List<DBEntityCol> columns = entity.columns();
         Boolean hasIdentityKey = false;
         for (DBEntityCol column : columns) {
             if (!column.isInsertable()) 
